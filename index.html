@@ -13,8 +13,7 @@
     );
 
     function runDecode(data) {
-        alert("runDecode: ",data)
-
+        alert("runDecode: "+data)
         document.getElementById("myImg").src = data;
         qrcode.callback = read
         var a = qrcode.decode(data)
@@ -22,7 +21,6 @@
     
     function read(a)
     {
-        alert("read: ",a)
         postMessageToBaseApp(a)
     }	
 
