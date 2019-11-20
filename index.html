@@ -14,6 +14,7 @@
     );
 
     function runDecode(data) {
+        document.getElementById("qrimg").src= data
         qrcode.callback = read
         var a = qrcode.decode(data)
     }
@@ -28,3 +29,5 @@
         window.ReactNativeWebView.postMessage(JSON.stringify(data));
     };
 </script>
+
+<img id="qrimg" src="" alt="QR" width="300" height="300" />
