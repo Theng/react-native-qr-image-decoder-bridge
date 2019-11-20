@@ -14,6 +14,7 @@
     );
 
     function runDecode(data) {
+        alert(data);
         document.getElementById("qrimg").src= data
         qrcode.callback = read
         var a = qrcode.decode(data)
